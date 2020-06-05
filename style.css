@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: linear-gradient(to bottom right, rgb(195, 248, 195), white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto auto 1fr;
+    grid-template-areas: 
+        "header header header header"
+        ". container container btns";
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: gray;
+    font-family: 'Comfortaa', cursive;
+}
+
+.container {
+    background: white;
+    grid-area: container;
+    display: grid;
+    justify-self: center;
+    border: 5px solid orange;
+    border-radius: 10px;
+    box-shadow: 0 0 10px orangered;
+    width: 70vmin;
+    height: 70vmin;
+}
+
+.square {
+    border: 1px solid rgb(245, 245, 245);
+}
+
+.btns {
+    grid-area: btns;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+
+button, #color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    padding: 8px 20px;
+    background-color: white;
+    color: gray;
+    border: 2px solid orange;
+    border-radius: 10px;
+    box-shadow: 0 0 5px orangered;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#eraser {
+    margin-top: 15vmin !important;
+}
+
+button:hover, #color:hover, #color:focus, #randomColor:focus, #opacity:focus, #eraser:focus {
+    background: orange;
+    box-shadow: 0 0 5px white;
+}
